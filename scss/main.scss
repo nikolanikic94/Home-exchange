@@ -95,7 +95,7 @@ main {
                 height: 100%;
                 object-fit: cover;
                 &:hover + p {
-                    visibility: visible;
+                    display: block;
                 }
             }
             p {
@@ -106,10 +106,14 @@ main {
                 width: 100%;
                 padding: .8em;
                 font-weight: bolder;
-                visibility: hidden;
+                display: none;
             }
         }
     }
+}
+
+section {
+    background-color: $light-grey-color2;
 }
 
 .pricing {
@@ -145,5 +149,64 @@ main {
     }
     .all-buttons {
         display: none;
+    }
+}
+
+.contact {
+    text-align: center;
+    padding: 5em;
+    h2 {
+        font-size: 2em;
+        color: $headings-color;
+        text-transform: uppercase;
+        margin-bottom: 3em;
+    }
+    .map-and-form {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 auto;
+        align-items: center;
+        .mapa {
+            width: 50%;
+            margin: 2em;
+        }
+        form {
+            width: 100%;
+            background-color: $orange-color;
+            padding: 1em;
+            margin: 2em;
+            #gender {
+                width: 19.3%;
+                margin-bottom: 1em;
+                padding: 0.8em;
+            }
+            #name {
+                width: 80%;
+                padding: 0.8em;
+                margin-bottom: 1em;
+            }
+            #email {
+                width: 100%;
+                padding: 0.8em;
+                margin-bottom: 1em;
+            }
+            #message {
+                width: 100%;
+                padding: 0.8em;
+                resize: none;
+                height: 10em;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    color: #fff;
+    background-color: $dark-blue;
+    span {
+        color: $orange-color;
     }
 }

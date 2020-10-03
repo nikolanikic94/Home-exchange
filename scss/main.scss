@@ -46,7 +46,7 @@ main {
         text-align: center;
         background-color: rgba(0, 0, 0, 0.466);
         padding: 1em;
-        width: 70%;
+        width: 80%;
         margin: 0 auto 5em;
         h1 {
             font-size: 3em;
@@ -56,5 +56,94 @@ main {
             font-size: 1.5em;
             color: #fff;
         }
+    }
+}
+
+.buttons {
+    padding: 3em;
+    text-align: right;
+    .all-buttons {
+        margin-right: 3em;
+    }
+}
+
+.all-buttons {
+    border-radius: 20em;
+    padding: .8em 2em;
+    border: 1px solid $light-grey-color1;
+    color: $main-text-color;
+    &:hover {
+        background-color: $light-grey-color1;
+        color: #fff;
+    }
+}
+
+.photos {
+    .cards {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        .card {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            padding: 1em;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                &:hover + p {
+                    visibility: visible;
+                }
+            }
+            p {
+                position: absolute;
+                top: 1em;
+                left: 1em;
+                background-color: rgba(255, 255, 255, 0.747);
+                width: 100%;
+                padding: .8em;
+                font-weight: bolder;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.pricing {
+    text-align: center;
+    padding: 5em;
+    h2 {
+        font-size: 2em;
+        color: $headings-color;
+        text-transform: uppercase;
+    }
+    p {
+        margin: 3em 0;
+    }
+    table {
+        width: 50%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        td, th {
+            padding: .8em;
+            border: 1px solid $main-text-color;
+        }
+        .invisible-cell {
+            border: none;
+        }
+        .orange-cell {
+            background-color: $orange-color;
+            color: #fff;
+        }
+        .dark-cell {
+            background-color: $dark-blue;
+            color: #fff;
+        }
+    }
+    .all-buttons {
+        display: none;
     }
 }

@@ -60,7 +60,7 @@ main {
 }
 
 .buttons {
-    padding: 3em;
+    padding: 3em 0;
     text-align: right;
     .all-buttons {
         margin-right: 3em;
@@ -85,11 +85,10 @@ main {
         display: flex;
         flex-wrap: wrap;
         .card {
-            width: 300px;
-            height: 400px;
             position: relative;
             padding: 1em;
-            
+            width: 300px;
+            height: 400px;
             img {
                 width: 100%;
                 height: 100%;
@@ -118,7 +117,7 @@ section {
 
 .pricing {
     text-align: center;
-    padding: 5em;
+    padding: 5em 0;
     h2 {
         font-size: 2em;
         color: $headings-color;
@@ -126,6 +125,7 @@ section {
     }
     p {
         margin: 3em 0;
+        color: $main-text-color;
     }
     table {
         width: 50%;
@@ -154,7 +154,7 @@ section {
 
 .contact {
     text-align: center;
-    padding: 5em;
+    padding: 5em 0;
     h2 {
         font-size: 2em;
         color: $headings-color;
@@ -208,5 +208,122 @@ footer {
     background-color: $dark-blue;
     span {
         color: $orange-color;
+    }
+}
+
+@media only screen and (max-width: 1715px) {
+    .photos {
+        .cards {
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 1615px) {
+    .contact {
+        .map-and-form {
+            flex-direction: column;
+            form {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1215px) {
+    .photos {
+        .cards {
+            width: 80%;
+        }
+    }
+
+    .contact {
+        .map-and-form {
+            width: 90%;
+            form {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 815px) {
+    
+    main {
+        background-image: none;
+        height: auto;
+        background-color: #000;
+        nav {
+            flex-direction: column;
+            p {
+                width: 100%;
+            }
+            ul {
+                text-align: center;
+                li {
+                    display: block;
+                    padding: 1em;
+                    margin-right: 0;
+                }
+            }
+        }
+        header {
+            margin-bottom: 0;
+            width: 100%;
+            h1 {
+                font-size: 2em;
+            }
+            h4 {
+                font-size: 1em;
+            }
+        }
+    }
+    
+    .photos{
+        .cards {
+            width: 100%;
+            .card {
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        text-align: center;
+        .all-buttons {
+            margin-right: 0;
+        }
+    }
+
+    .all-buttons {
+        padding: .4em 1em;
+    }
+
+    .pricing {
+        table {
+            display: none;
+        }
+        .all-buttons {
+            display: inline-block;
+        }
+    }
+
+    .contact {
+        .map-and-form {
+            width: 90%;
+            .mapa {
+                width: 80%;
+            }
+            form {
+                #gender {
+                    width: 100%;
+                }
+                #name {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
